@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstringSearchClasses", "SubstringSearchClasses\SubstringSearchClasses.csproj", "{F59F418A-A9D1-4FA9-A579-BBC0EBBB9D85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experements", "Experements\Experements.csproj", "{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F59F418A-A9D1-4FA9-A579-BBC0EBBB9D85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F59F418A-A9D1-4FA9-A579-BBC0EBBB9D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F59F418A-A9D1-4FA9-A579-BBC0EBBB9D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F59F418A-A9D1-4FA9-A579-BBC0EBBB9D85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2429F391-9D12-404F-BC45-D73295CE7588}
+	EndGlobalSection
+EndGlobal

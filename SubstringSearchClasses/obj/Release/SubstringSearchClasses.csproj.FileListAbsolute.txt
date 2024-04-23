@@ -1,0 +1,6 @@
+D:\Проги\SubstringSearchClasses\SubstringSearchClasses\bin\Release\SubstringSearchClasses.dll
+D:\Проги\SubstringSearchClasses\SubstringSearchClasses\bin\Release\SubstringSearchClasses.pdb
+D:\Проги\SubstringSearchClasses\SubstringSearchClasses\obj\Release\SubstringSearchClasses.csproj.AssemblyReference.cache
+D:\Проги\SubstringSearchClasses\SubstringSearchClasses\obj\Release\SubstringSearchClasses.csproj.CoreCompileInputs.cache
+D:\Проги\SubstringSearchClasses\SubstringSearchClasses\obj\Release\SubstringSearchClasses.dll
+D:\Проги\SubstringSearchClasses\SubstringSearchClasses\obj\Release\SubstringSearchClasses.pdb

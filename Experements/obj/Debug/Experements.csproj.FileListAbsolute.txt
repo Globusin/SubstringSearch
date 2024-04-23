@@ -1,0 +1,11 @@
+D:\Проги\SubstringSearchClasses\Experements\bin\Debug\Experements.exe.config
+D:\Проги\SubstringSearchClasses\Experements\bin\Debug\Experements.exe
+D:\Проги\SubstringSearchClasses\Experements\bin\Debug\Experements.pdb
+D:\Проги\SubstringSearchClasses\Experements\obj\Debug\Experements.csproj.AssemblyReference.cache
+D:\Проги\SubstringSearchClasses\Experements\obj\Debug\Experements.csproj.SuggestedBindingRedirects.cache
+D:\Проги\SubstringSearchClasses\Experements\obj\Debug\Experements.csproj.CoreCompileInputs.cache
+D:\Проги\SubstringSearchClasses\Experements\obj\Debug\Experements.exe
+D:\Проги\SubstringSearchClasses\Experements\obj\Debug\Experements.pdb
+D:\Проги\SubstringSearchClasses\Experements\bin\Debug\SubstringSearchClasses.dll
+D:\Проги\SubstringSearchClasses\Experements\bin\Debug\SubstringSearchClasses.pdb
+D:\Проги\SubstringSearchClasses\Experements\obj\Debug\Experements.csproj.CopyComplete
