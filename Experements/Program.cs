@@ -17,13 +17,14 @@ namespace Experements
             RabinKarpAlgorithm rabinKarpAlgorithm = new RabinKarpAlgorithm();
             BoyerMooreAlgorithm boyerMooreAlgorithm = new BoyerMooreAlgorithm();
             KMPAlgorithm kMPAlgorithm = new KMPAlgorithm();
+            BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm();
 
-            string text = "дровна Александровна Александровна";
-            string pattern = "под";
-            using (StreamReader sr = new StreamReader("anna.txt"))
-            {
-                text = sr.ReadToEnd();
-            }
+            string text = "aaaaaaaaaaa"; // такой тест не проходит КМП
+            string pattern = "aa";
+            //using (StreamReader sr = new StreamReader("anna.txt"))
+            //{
+            //    text = sr.ReadToEnd();
+            //}
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -45,28 +46,11 @@ namespace Experements
 
             stopwatch = new Stopwatch();
             stopwatch.Start();
-            int cnt = 0;
-            for (int i = 0; i < text.Length - pattern.Length + 1; i++)
-            {
-                if(EqualityOfWords(pattern, text, i))
-                    cnt++;
-            }
-            Console.WriteLine(cnt + " - кол-во");
+            Console.WriteLine(bruteForceAlgorithm.IndexesOf(pattern, text).Count() + " - кол-во");
             stopwatch.Stop();
-            Console.WriteLine(stopwatch.ElapsedMilliseconds.ToString() + " - Brut\n");
+            Console.WriteLine(stopwatch.ElapsedMilliseconds.ToString() + " - Brute\n");
 
             Console.ReadKey();
-        }
-
-        public static bool EqualityOfWords(string s1, string s2, int startIndex)
-        {
-            for (int i = 0; i < s1.Length; i++)
-            {
-                if (s1[i] != s2[i + startIndex])
-                    return false;
-            }
-
-            return true;
         }
     }
 }

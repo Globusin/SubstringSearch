@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubstringSearchClasses", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Experements", "Experements\Experements.csproj", "{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectForSubstringSearch", "UnitTestProjectForSubstringSearch\UnitTestProjectForSubstringSearch.csproj", "{316E9D90-15E3-412A-99CE-D3EB8BEB7C38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCF6A2CD-F1DE-489C-8DE8-A63AE7D9B02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316E9D90-15E3-412A-99CE-D3EB8BEB7C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316E9D90-15E3-412A-99CE-D3EB8BEB7C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316E9D90-15E3-412A-99CE-D3EB8BEB7C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316E9D90-15E3-412A-99CE-D3EB8BEB7C38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

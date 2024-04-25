@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SubstringSearchClasses
 {
-    public class RabinKarpAlgorithm
+    public class RabinKarpAlgorithm: ISubstringSearch
     {
         int q = 163, n, m, p, t0, h = 1;
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SubstringSearchClasses
 {
-    public class KMPAlgorithm
+    public class KMPAlgorithm: ISubstringSearch
     {
         public int[] getPrefixFunction(string s)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SubstringSearchClasses
 {
-    public class BoyerMooreAlgorithm
+    public class BoyerMooreAlgorithm: ISubstringSearch
     {
         int[] stopTable = new int[(int)char.MaxValue]; //столько же сколько всевозможных символов
         int[] suffixTable; //короткие суффиксы в конце
