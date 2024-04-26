@@ -65,29 +65,57 @@ namespace SubstringSearchClasses
 
         private void GetSuffixTable(string str)
         {
-            for (int i = str.Length - 1; i >= 0; i--) // с конца
+            int m = str.Length;
+            int[] suffshift = new int[m + 1];
+            for (int i = 0; i < m + 1; i++)
+                suffshift[i] = m;
+
+            int[] z = new int[m];
+
+            for (int j = 1, maxZidx = 0, maxZ = 0; j < m; ++j)
             {
-                string window = str.Substring(i); // окно - то, что ищем - суффикс
-
-                int j = i;
-                while (window.Length != 0) // пока окно не ушло за начало строки (за индекс 0)
+                if (j <= maxZ) z[j] = Math.Min(maxZ - j + 1, z[j - maxZidx]);
+                while (j + z[j] < m && str[m - 1 - z[j]] == str[m - 1 - (j + z[j])]) z[j]++;
+                if (j + z[j] - 1 > maxZ)
                 {
-                    j--;
-
-                    if (j < 0)
-                    {
-                        window = window.Substring(1); // уменьшаем окно если оно ушло за начало строки - будем искать теперь такое окно
-                    }
-
-                    if (EqualityOfWords(window.ToString(), str.Substring(j > 0 ? j : 0, window.Length))) // то есть когда ушли за начало -
-                                                                                                        // проверяем равенства суффикса и префикса
-                    {
-                        suffixTable[i] = i - j;
-                        break;
-                    }
+                    maxZidx = j;
+                    maxZ = j + z[j] - 1;
                 }
             }
+            for (int j = m - 1; j > 0; j--) suffshift[m - z[j]] = j; //цикл 1
+            for (int j = 1, r = 0; j <= m - 1; j++) //цикл 2
+                if (j + z[j] == m)
+                    for (; r <= j; r++)
+                        if (suffshift[r] == m) suffshift[r] = j;
+
+            suffixTable = suffshift.ToArray();
         }
+
+        //private void GetSuffixTable(string str) THIS WORK
+        //{
+        //    for (int i = str.Length - 1; i >= 0; i--) // с конца
+        //    {
+        //        string window = str.Substring(i); // окно - то, что ищем - суффикс
+
+        //        int j = i;
+        //        while (window.Length != 0) // пока окно не ушло за начало строки (за индекс 0)
+        //        {
+        //            j--;
+
+        //            if (j < 0)
+        //            {
+        //                window = window.Substring(1); // уменьшаем окно если оно ушло за начало строки - будем искать теперь такое окно
+        //            }
+
+        //            if (EqualityOfWords(window.ToString(), str.Substring(j > 0 ? j : 0, window.Length))) // то есть когда ушли за начало -
+        //                                                                                                // проверяем равенства суффикса и префикса
+        //            {
+        //                suffixTable[i] = i - j;
+        //                break;
+        //            }
+        //        }
+        //    }
+        //}
 
         private void GetStopTable(string str)
         {

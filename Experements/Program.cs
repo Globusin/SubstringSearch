@@ -20,11 +20,11 @@ namespace Experements
             BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm();
 
             string text = "aaaaaaaaaaa"; // такой тест не проходит КМП
-            string pattern = "aa";
-            //using (StreamReader sr = new StreamReader("anna.txt"))
-            //{
-            //    text = sr.ReadToEnd();
-            //}
+            string pattern = "Дарья Александровна";
+            using (StreamReader sr = new StreamReader("anna.txt"))
+            {
+                text = sr.ReadToEnd();
+            }
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
