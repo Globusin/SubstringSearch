@@ -20,6 +20,11 @@ namespace SubstringSearchClasses
                 t0 = ((t0 << 8) + text[i]) % q;
                 h = (h << 8) % q;
             }
+
+            if (m == 1)
+            {
+                h = (h << 8) % q;
+            }
         }
 
         private bool EqualityOfWords(string s1, string s2, int startIndex)
@@ -39,6 +44,7 @@ namespace SubstringSearchClasses
 
             n = text.Length;
             m = pattern.Length;
+            h = 1;
 
             PreparationForSearch(pattern, text);
 

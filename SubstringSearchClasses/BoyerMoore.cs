@@ -9,7 +9,7 @@ namespace SubstringSearchClasses
 {
     public class BoyerMooreAlgorithm: ISubstringSearch
     {
-        int[] stopTable = new int[(int)char.MaxValue]; //столько же сколько всевозможных символов
+        int[] stopTable; //столько же сколько всевозможных символов
         int[] suffixTable; //короткие суффиксы в конце
 
         public List<int> IndexesOf(string pattern, string text)
@@ -17,6 +17,7 @@ namespace SubstringSearchClasses
             List<int> indexes = new List<int>();
             int m = pattern.Length;
             suffixTable = new int[m];
+            stopTable = new int[(int)char.MaxValue];
 
             GetStopTable(pattern);
             GetSuffixTable(pattern);
