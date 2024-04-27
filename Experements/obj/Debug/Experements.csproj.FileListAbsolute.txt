@@ -9,3 +9,13 @@ D:\Проги\SubstringSearchClasses\Experements\obj\Debug\Experements.pdb
 D:\Проги\SubstringSearchClasses\Experements\bin\Debug\SubstringSearchClasses.dll
 D:\Проги\SubstringSearchClasses\Experements\bin\Debug\SubstringSearchClasses.pdb
 D:\Проги\SubstringSearchClasses\Experements\obj\Debug\Experements.csproj.CopyComplete
+C:\git\SubstringSearch\Experements\bin\Debug\Experements.exe.config
+C:\git\SubstringSearch\Experements\bin\Debug\Experements.exe
+C:\git\SubstringSearch\Experements\bin\Debug\Experements.pdb
+C:\git\SubstringSearch\Experements\bin\Debug\SubstringSearchClasses.dll
+C:\git\SubstringSearch\Experements\bin\Debug\SubstringSearchClasses.pdb
+C:\git\SubstringSearch\Experements\obj\Debug\Experements.csproj.AssemblyReference.cache
+C:\git\SubstringSearch\Experements\obj\Debug\Experements.csproj.CoreCompileInputs.cache
+C:\git\SubstringSearch\Experements\obj\Debug\Experements.csproj.CopyComplete
+C:\git\SubstringSearch\Experements\obj\Debug\Experements.exe
+C:\git\SubstringSearch\Experements\obj\Debug\Experements.pdb

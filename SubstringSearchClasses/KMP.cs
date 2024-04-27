@@ -22,6 +22,34 @@ namespace SubstringSearchClasses
             }
             return pi;
         }
+        public int[] MygetPrefixFunction(string s)
+        {
+            int n = s.Length;
+            int[] pi = new int[n];
+            pi[0] = 0;
+            for (int i = 1; i < n; i++)
+            {
+                pi[i] = 0;
+                int count = 0;
+                int maxCount = 0;
+                for(int j = i - 1; j > 0; j--)
+                {
+                    int k = i;
+                    if (s[k] == s[j])
+                    {
+                        while (s[k] == s[j]&&j>=0)
+                        {
+                            count++;
+                            k--;
+                            j--;
+                        }
+                    }
+                    if (count>maxCount) maxCount= count;
+                }
+                pi[i] = maxCount;
+            }
+            return pi;
+        }
 
         public List<int> IndexesOf(string pattern, string text)
         {

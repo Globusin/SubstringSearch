@@ -4,3 +4,9 @@ D:\Проги\SubstringSearchClasses\SubstringSearchClasses\bin\Debug\SubstringS
 D:\Проги\SubstringSearchClasses\SubstringSearchClasses\bin\Debug\SubstringSearchClasses.pdb
 D:\Проги\SubstringSearchClasses\SubstringSearchClasses\obj\Debug\SubstringSearchClasses.dll
 D:\Проги\SubstringSearchClasses\SubstringSearchClasses\obj\Debug\SubstringSearchClasses.pdb
+C:\git\SubstringSearch\SubstringSearchClasses\bin\Debug\SubstringSearchClasses.dll
+C:\git\SubstringSearch\SubstringSearchClasses\bin\Debug\SubstringSearchClasses.pdb
+C:\git\SubstringSearch\SubstringSearchClasses\obj\Debug\SubstringSearchClasses.csproj.AssemblyReference.cache
+C:\git\SubstringSearch\SubstringSearchClasses\obj\Debug\SubstringSearchClasses.csproj.CoreCompileInputs.cache
+C:\git\SubstringSearch\SubstringSearchClasses\obj\Debug\SubstringSearchClasses.dll
+C:\git\SubstringSearch\SubstringSearchClasses\obj\Debug\SubstringSearchClasses.pdb
