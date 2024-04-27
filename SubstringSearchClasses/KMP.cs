@@ -22,6 +22,7 @@ namespace SubstringSearchClasses
             }
             return pi;
         }
+
         public int[] MygetPrefixFunction(string s)
         {
             int n = s.Length;
