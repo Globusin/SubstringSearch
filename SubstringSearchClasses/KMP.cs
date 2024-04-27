@@ -27,34 +27,21 @@ namespace SubstringSearchClasses
         {
             int n = s.Length;
             int[] pi = new int[n];
-            pi[0] = 0;
-            for (int i = 1; i < n; i++)
+            for (int i = 0; i < n; ++i)
             {
-                pi[i] = 0;
-                int count = 0;
-                int maxCount = 0;
-                for(int j = i - 1; j > 0; j--)
+                for(int k = 0; k <= i; ++k)
                 {
-                    int k = i;
-                    if (s[k] == s[j])
-                    {
-                        while (s[k] == s[j]&&j>=0)
-                        {
-                            count++;
-                            k--;
-                            j--;
-                        }
-                    }
-                    if (count>maxCount) maxCount= count;
+                    if (s.Substring(0, k) == s.Substring(i - k + 1, k))
+                        pi[i] = k;
                 }
-                pi[i] = maxCount;
             }
             return pi;
         }
 
         public List<int> IndexesOf(string pattern, string text)
         {
-            int[] pref = getPrefixFunction(pattern);
+            int[] pref = MygetPrefixFunction(pattern);
+             pref = getPrefixFunction(pattern);
             List<int> indexses = new List<int>();
 
             for (int i = 0, k = 0; i < text.Length; i++)
@@ -66,6 +53,7 @@ namespace SubstringSearchClasses
                     {
                         indexses.Add(i - pattern.Length + 1);
                         k = 0;
+                        i -= pattern.Length - 1;
                     }
                 }
                 else
@@ -73,7 +61,7 @@ namespace SubstringSearchClasses
                     if (k > 0)
                     {
                         k = pref[k - 1];
-                        i--;
+                        //i--; не знаю зачем это
                     }
                 }
             }
