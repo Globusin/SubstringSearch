@@ -61,7 +61,7 @@ namespace SubstringSearchClasses
                     if (k > 0)
                     {
                         k = pref[k - 1];
-                        //i--; не знаю зачем это
+                        i--; //не знаю зачем это
                     }
                 }
             }

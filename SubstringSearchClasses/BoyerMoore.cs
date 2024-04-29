@@ -73,21 +73,32 @@ namespace SubstringSearchClasses
 
             int[] z = new int[m];
 
-            for (int j = 1, maxZidx = 0, maxZ = 0; j < m; ++j)
+            for (int j = 1, maxZidx = 0, maxZ = 0; j < m; j++) //длина наибольшего общего префикса и суффикса для каждой позиции j в строке
             {
-                if (j <= maxZ) z[j] = Math.Min(maxZ - j + 1, z[j - maxZidx]);
-                while (j + z[j] < m && str[m - 1 - z[j]] == str[m - 1 - (j + z[j])]) z[j]++;
+                if (j <= maxZ)
+                    z[j] = Math.Min(maxZ - j + 1, z[j - maxZidx]);
+
+                while (j + z[j] < m && str[m - 1 - z[j]] == str[m - 1 - (j + z[j])])
+                    z[j]++;
+
                 if (j + z[j] - 1 > maxZ)
                 {
                     maxZidx = j;
                     maxZ = j + z[j] - 1;
                 }
             }
-            for (int j = m - 1; j > 0; j--) suffshift[m - z[j]] = j; //цикл 1
+
+            for (int j = m - 1; j > 0; j--)
+                suffshift[m - z[j]] = j; //цикл 1
+
             for (int j = 1, r = 0; j <= m - 1; j++) //цикл 2
                 if (j + z[j] == m)
-                    for (; r <= j; r++)
-                        if (suffshift[r] == m) suffshift[r] = j;
+                    while (r <= j)
+                    {
+                        if (suffshift[r] == m)
+                            suffshift[r] = j;
+                        r++;
+                    }
 
             suffixTable = suffshift.ToArray();
         }
