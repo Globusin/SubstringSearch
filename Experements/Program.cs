@@ -20,7 +20,7 @@ namespace Experements
             BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm();
 
             string text = "aaaaaaaaaa";
-            string pattern = "abcdadcd";
+            string pattern = "Дарья Александровна";
             using (StreamReader sr = new StreamReader("anna.txt"))
             {
                 text = sr.ReadToEnd();
