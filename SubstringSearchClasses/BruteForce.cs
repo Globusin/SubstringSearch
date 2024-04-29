@@ -22,7 +22,7 @@ namespace SubstringSearchClasses
         public List<int> IndexesOf(string pattern, string text)
         {
             if (pattern.Length > text.Length)
-                return new List<int>() { -1 };
+                return new List<int>();
 
             List<int> result = new List<int>();
             for (int i = 0; i < text.Length - pattern.Length + 1; i++)

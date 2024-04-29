@@ -23,8 +23,28 @@ namespace UnitTestProjectForSubstringSearch
                 new RabinKarpAlgorithm(),
                 new KMPAlgorithm()
             };
-            string text = "abababbabababb"; //
-            string pattern = "abababbabababaabababbabababaabababbabababa";
+            string pattern = "abababbabababb"; //abababbabababa x3
+            string  text = "abababbabababaabababbabababaabababbabababa";
+            var expected = 0;
+            foreach (var algm in algms)
+            {
+                var actual = algm.IndexesOf(pattern, text).Count;
+                Assert.AreEqual(expected, actual);
+            }
+        }
+
+        [TestMethod]
+        public void PatternLongerThanText()
+        {
+            var algms = new List<ISubstringSearch>()
+            {
+                new BoyerMooreAlgorithm(),
+                new BruteForceAlgorithm(),
+                new RabinKarpAlgorithm(),
+                new KMPAlgorithm()
+            };
+            string pattern = "aaaaaaaaaaaaaaaaa"; //
+            string text = "aaa";
             var expected = 0;
             foreach (var algm in algms)
             {
@@ -109,41 +129,41 @@ namespace UnitTestProjectForSubstringSearch
             }
         }
 
-        //[TestMethod]
-        //public void SearchBagOfWordsOnAnnaTxt()
-        //{
-        //    var algms = new List<ISubstringSearch>()
-        //    {
-        //        new BoyerMooreAlgorithm(),
-        //    new RabinKarpAlgorithm(),
-        //    new KMPAlgorithm()
-        //    };
-        //    string text;
-        //    using (StreamReader sr = new StreamReader("anna.txt", Encoding.UTF8))
-        //    {
-        //        text = sr.ReadToEnd().ToLower();
-        //    }
+        [TestMethod]
+        public void SearchBagOfWordsOnAnnaTxt()
+        {
+            var algms = new List<ISubstringSearch>()
+            {
+                new BoyerMooreAlgorithm(),
+            new RabinKarpAlgorithm(),
+            new KMPAlgorithm()
+            };
+            string text;
+            using (StreamReader sr = new StreamReader("anna.txt", Encoding.UTF8))
+            {
+                text = sr.ReadToEnd().ToLower();
+            }
 
-        //    int number = 100;
-        //    Regex rg = new Regex(@"\w+");
-        //    var bag = new HashSet<string>();
-        //    var matches = rg.Matches(text);
-        //    foreach (var match in matches)
-        //    {
-        //        bag.Add(match.ToString());
-        //        if (bag.Count > number) break;
-        //    }
-        //    foreach (var pattern in bag)
-        //    {
-        //        var BF = new BruteForceAlgorithm();
-        //        var expected = BF.IndexesOf(pattern, text);
-        //        foreach (var algm in algms)
-        //        {
-        //            var actual = algm.IndexesOf(pattern, text);
-        //            CollectionAssert.AreEqual(expected, actual);
-        //        }
-        //    }
-        //}
+            int number = 100;
+            Regex rg = new Regex(@"\w+");
+            var bag = new HashSet<string>();
+            var matches = rg.Matches(text);
+            foreach (var match in matches)
+            {
+                bag.Add(match.ToString());
+                if (bag.Count > number) break;
+            }
+            foreach (var pattern in bag)
+            {
+                var BF = new BruteForceAlgorithm();
+                var expected = BF.IndexesOf(pattern, text);
+                foreach (var algm in algms)
+                {
+                    var actual = algm.IndexesOf(pattern, text);
+                    CollectionAssert.AreEqual(expected, actual);
+                }
+            }
+        }
 
     }
 }
