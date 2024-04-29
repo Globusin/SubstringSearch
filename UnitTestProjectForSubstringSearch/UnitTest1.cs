@@ -9,9 +9,29 @@ using System.Text;
 
 namespace UnitTestProjectForSubstringSearch
 {
+    
     [TestClass]
     public class UnitTests
     {
+        [TestMethod]
+        public void SearchPatternWithSpace()
+        {
+            var algms = new List<ISubstringSearch>()
+            {
+                new BoyerMooreAlgorithm(),
+                new BruteForceAlgorithm(),
+                new RabinKarpAlgorithm(),
+                new KMPAlgorithm()
+            };
+            string text = "aa a aa a aa aa"; //5
+            string pattern = "a a";
+            var expected = 5;
+            foreach (var algm in algms)
+            {
+                var actual = algm.IndexesOf(pattern, text).Count;
+                Assert.AreEqual(expected, actual);
+            }
+        }
         [TestMethod]
         public void SearchTest()
         {
