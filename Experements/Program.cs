@@ -19,12 +19,15 @@ namespace Experements
             KMPAlgorithm kMPAlgorithm = new KMPAlgorithm();
             BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm();
 
-            string text = "aaaaaaaaaa";
-            string pattern = "Дарья Александровна";
-            using (StreamReader sr = new StreamReader("anna.txt"))
-            {
-                text = sr.ReadToEnd();
-            }
+            //string text = "aaaaaaaaaa";
+            //string pattern = "Дарья Александровна";
+            //using (StreamReader sr = new StreamReader("anna.txt"))
+            //{
+            //    text = sr.ReadToEnd();
+            //}
+            string text = "abababbabababb"; 
+            string pattern = "abababbabababaabababbabababaabababbabababa";
+
 
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
