@@ -38,6 +38,9 @@ namespace SubstringSearchClasses
 
         public List<int> IndexesOf(string pattern, string text)
         {
+            if (pattern.Length > text.Length)
+                return new List<int>() { -1 };
+
             List<int> indexes = new List<int>();
 
             n = text.Length;
