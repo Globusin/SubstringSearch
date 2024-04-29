@@ -19,8 +19,8 @@ namespace Experements
             KMPAlgorithm kMPAlgorithm = new KMPAlgorithm();
             BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm();
 
-            string text = "aaa"; // такой тест не проходит КМП
-            string pattern = "Дарья Александровна";
+            string text = "aaaaaaaaaa";
+            string pattern = "abcdadcd";
             using (StreamReader sr = new StreamReader("anna.txt"))
             {
                 text = sr.ReadToEnd();

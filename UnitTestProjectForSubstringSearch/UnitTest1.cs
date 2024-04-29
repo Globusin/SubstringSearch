@@ -58,11 +58,11 @@ namespace UnitTestProjectForSubstringSearch
             var algms = new List<ISubstringSearch>()
             {
                 new BoyerMooreAlgorithm(),
-                new RabinKarpAlgorithm(),
-                new KMPAlgorithm()
+            new RabinKarpAlgorithm(),
+            new KMPAlgorithm()
             };
             string text;
-            using (var sr = new StreamReader("anna.txt", Encoding.UTF8))
+            using (StreamReader sr = new StreamReader("anna.txt", Encoding.UTF8))
             {
                 text = sr.ReadToEnd().ToLower();
             }

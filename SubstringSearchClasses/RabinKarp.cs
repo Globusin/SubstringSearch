@@ -8,17 +8,20 @@ namespace SubstringSearchClasses
 {
     public class RabinKarpAlgorithm: ISubstringSearch
     {
-        int q = 163, n, m, p, t0, h = 1;
+        int q = 163, n, m, p, t0, h;
 
         private void PreparationForSearch(string pattern, string text)
         {
-            p = pattern[0];
-            t0 = text[0];
-            for (int i = 1; i < m; i++) // правило Горнера
+            p = 0;
+            t0 = 0;
+            h = 1;
+
+            for (int i = 0; i < m; i++) // правило Горнера
             {
                 p = ((p << 8) + pattern[i]) % q;
                 t0 = ((t0 << 8) + text[i]) % q;
-                h = (h << 8) % q;
+                if (i < m - 1)
+                    h = (h << 8) % q;
             }
         }
 
